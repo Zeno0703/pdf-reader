@@ -1,0 +1,7 @@
+body {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: whitesmoke;
+  background: linear-gradient(to right, #f953c6, #b91d73);
+  display: flex;
+  justify-content: center;
+}
