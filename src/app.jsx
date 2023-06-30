@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TestComponent from './components/test_component.jsx';
+import Navbar from './components/Navbar.jsx';
+import styles from './styles/index.css'
 
 function App() {
   return (
     <div>
-      <h1>PDF-reader</h1>
-      <TestComponent />
+      <Navbar />
     </div>
   );
 }
