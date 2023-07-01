@@ -1,14 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import Navbar from './components/Navbar.jsx';
-import styles from './styles/index.css'
 
 function App() {
+
+  const getFile = () => {
+    // const { dialog } = window.electron.remote;
+    // dialog.showOpenDialog({ properties: ['openFile', 'multiSelections'] })
+    console.log("Hello world!");
+  };
+
   return (
     <div>
-      <Navbar />
+      <Navbar onClick={() => getFile()}/>
     </div>
   );
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+createRoot(document.getElementById('root')).render(<App />);
