@@ -33,6 +33,8 @@ import { createRoot } from 'react-dom/client';
 
 createRoot(document.getElementById('root')).render(<App />);
 
+const fs = require('fs');
+
 setTimeout(() => {
     const openButton = document.getElementsByClassName("i5irnY_dMVvxf24JHmTK").item(0);
     openButton.addEventListener('click', () => {
@@ -42,7 +44,9 @@ setTimeout(() => {
             buttonLabel: 'Open',
             properties: ['openFile']
         };
-        electron.openDialog('showOpenDialog', dialogConfig)
-            .then(result => console.log(result));
-      });
-}, 0)
+        electron.openDialog('showOpenDialog', dialogConfig).then(result => {
+            const filePath = result?.filePaths?.[0];
+            console.log(filePath);
+        })
+    });
+}, 0);
