@@ -27,4 +27,22 @@
  */
 
 import './styles/index.css';
-import './app.jsx';
+import App from './app.jsx';
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+
+createRoot(document.getElementById('root')).render(<App />);
+
+setTimeout(() => {
+    const openButton = document.getElementsByClassName("i5irnY_dMVvxf24JHmTK").item(0);
+    openButton.addEventListener('click', () => {
+
+        const dialogConfig = {
+            title: 'Select a file',
+            buttonLabel: 'Open',
+            properties: ['openFile']
+        };
+        electron.openDialog('showOpenDialog', dialogConfig)
+            .then(result => console.log(result));
+      });
+}, 0)

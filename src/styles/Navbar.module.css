@@ -18,7 +18,7 @@
     font-size: large;
 }
 
-.button{
+.openbutton{
     height: 25px;
     width: 70px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -30,7 +30,7 @@
     transition: 0.125s ease-in-out;
 }
 
-.button:hover{
+.openbutton:hover{
     background-color: #717577;
     border-radius: 0;
 }
